@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		662FE0491C96BC850066D3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0481C96BC850066D3A1 /* AppDelegate.swift */; };
+		662FE04B1C96BC850066D3A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE04A1C96BC850066D3A1 /* ViewController.swift */; };
+		662FE04E1C96BC850066D3A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662FE04C1C96BC850066D3A1 /* Main.storyboard */; };
+		662FE0501C96BC850066D3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662FE04F1C96BC850066D3A1 /* Assets.xcassets */; };
+		662FE0531C96BC850066D3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */; };
+		662FE05E1C96BC850066D3A1 /* ElbbbirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE05D1C96BC850066D3A1 /* ElbbbirdTests.swift */; };
+		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		662FE05A1C96BC850066D3A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 662FE03D1C96BC850066D3A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 662FE0441C96BC850066D3A1;
+			remoteInfo = Elbbbird;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37A25D82A998883E4DEF2571 /* Pods-Elbbbird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elbbbird.release.xcconfig"; path = "Pods/Target Support Files/Pods-Elbbbird/Pods-Elbbbird.release.xcconfig"; sourceTree = "<group>"; };
+		5247BBB20D3F009751F9EDDE /* Pods-Elbbbird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elbbbird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elbbbird/Pods-Elbbbird.debug.xcconfig"; sourceTree = "<group>"; };
+		662FE0451C96BC850066D3A1 /* Elbbbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elbbbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		662FE0481C96BC850066D3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		662FE04A1C96BC850066D3A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		662FE04D1C96BC850066D3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		662FE04F1C96BC850066D3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		662FE0521C96BC850066D3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		662FE0541C96BC850066D3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662FE0591C96BC850066D3A1 /* ElbbbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElbbbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		662FE05D1C96BC850066D3A1 /* ElbbbirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElbbbirdTests.swift; sourceTree = "<group>"; };
+		662FE05F1C96BC850066D3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		662FE0421C96BC850066D3A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662FE0561C96BC850066D3A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26F03B6D0420C3E0FF97426B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5247BBB20D3F009751F9EDDE /* Pods-Elbbbird.debug.xcconfig */,
+				37A25D82A998883E4DEF2571 /* Pods-Elbbbird.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		662FE03C1C96BC850066D3A1 = {
+			isa = PBXGroup;
+			children = (
+				662FE0471C96BC850066D3A1 /* Elbbbird */,
+				662FE05C1C96BC850066D3A1 /* ElbbbirdTests */,
+				662FE0461C96BC850066D3A1 /* Products */,
+				26F03B6D0420C3E0FF97426B /* Pods */,
+				70957C2512761AE8231A87AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		662FE0461C96BC850066D3A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				662FE0451C96BC850066D3A1 /* Elbbbird.app */,
+				662FE0591C96BC850066D3A1 /* ElbbbirdTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		662FE0471C96BC850066D3A1 /* Elbbbird */ = {
+			isa = PBXGroup;
+			children = (
+				662FE0481C96BC850066D3A1 /* AppDelegate.swift */,
+				662FE04A1C96BC850066D3A1 /* ViewController.swift */,
+				662FE04C1C96BC850066D3A1 /* Main.storyboard */,
+				662FE04F1C96BC850066D3A1 /* Assets.xcassets */,
+				662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */,
+				662FE0541C96BC850066D3A1 /* Info.plist */,
+			);
+			path = Elbbbird;
+			sourceTree = "<group>";
+		};
+		662FE05C1C96BC850066D3A1 /* ElbbbirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				662FE05D1C96BC850066D3A1 /* ElbbbirdTests.swift */,
+				662FE05F1C96BC850066D3A1 /* Info.plist */,
+			);
+			path = ElbbbirdTests;
+			sourceTree = "<group>";
+		};
+		70957C2512761AE8231A87AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB044E1903083487795716ED /* Pods_Elbbbird.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		662FE0441C96BC850066D3A1 /* Elbbbird */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662FE0621C96BC850066D3A1 /* Build configuration list for PBXNativeTarget "Elbbbird" */;
+			buildPhases = (
+				A148B4D7C6DCCA4800DE9342 /* Check Pods Manifest.lock */,
+				662FE0411C96BC850066D3A1 /* Sources */,
+				662FE0421C96BC850066D3A1 /* Frameworks */,
+				662FE0431C96BC850066D3A1 /* Resources */,
+				A94DB4754ECCCA0A66343675 /* Embed Pods Frameworks */,
+				153A9D3B6B2D7E37155AD94B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Elbbbird;
+			productName = Elbbbird;
+			productReference = 662FE0451C96BC850066D3A1 /* Elbbbird.app */;
+			productType = "com.apple.product-type.application";
+		};
+		662FE0581C96BC850066D3A1 /* ElbbbirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662FE0651C96BC850066D3A1 /* Build configuration list for PBXNativeTarget "ElbbbirdTests" */;
+			buildPhases = (
+				662FE0551C96BC850066D3A1 /* Sources */,
+				662FE0561C96BC850066D3A1 /* Frameworks */,
+				662FE0571C96BC850066D3A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				662FE05B1C96BC850066D3A1 /* PBXTargetDependency */,
+			);
+			name = ElbbbirdTests;
+			productName = ElbbbirdTests;
+			productReference = 662FE0591C96BC850066D3A1 /* ElbbbirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		662FE03D1C96BC850066D3A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Andyy Hope";
+				TargetAttributes = {
+					662FE0441C96BC850066D3A1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					662FE0581C96BC850066D3A1 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 662FE0441C96BC850066D3A1;
+					};
+				};
+			};
+			buildConfigurationList = 662FE0401C96BC850066D3A1 /* Build configuration list for PBXProject "Elbbbird" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 662FE03C1C96BC850066D3A1;
+			productRefGroup = 662FE0461C96BC850066D3A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				662FE0441C96BC850066D3A1 /* Elbbbird */,
+				662FE0581C96BC850066D3A1 /* ElbbbirdTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		662FE0431C96BC850066D3A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662FE0531C96BC850066D3A1 /* LaunchScreen.storyboard in Resources */,
+				662FE0501C96BC850066D3A1 /* Assets.xcassets in Resources */,
+				662FE04E1C96BC850066D3A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662FE0571C96BC850066D3A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		153A9D3B6B2D7E37155AD94B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elbbbird/Pods-Elbbbird-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A148B4D7C6DCCA4800DE9342 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A94DB4754ECCCA0A66343675 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elbbbird/Pods-Elbbbird-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		662FE0411C96BC850066D3A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662FE04B1C96BC850066D3A1 /* ViewController.swift in Sources */,
+				662FE0491C96BC850066D3A1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662FE0551C96BC850066D3A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662FE05E1C96BC850066D3A1 /* ElbbbirdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		662FE05B1C96BC850066D3A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 662FE0441C96BC850066D3A1 /* Elbbbird */;
+			targetProxy = 662FE05A1C96BC850066D3A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		662FE04C1C96BC850066D3A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662FE04D1C96BC850066D3A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662FE0521C96BC850066D3A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		662FE0601C96BC850066D3A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		662FE0611C96BC850066D3A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		662FE0631C96BC850066D3A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5247BBB20D3F009751F9EDDE /* Pods-Elbbbird.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elbbbird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyyHope.Elbbbird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		662FE0641C96BC850066D3A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A25D82A998883E4DEF2571 /* Pods-Elbbbird.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elbbbird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyyHope.Elbbbird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		662FE0661C96BC850066D3A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ElbbbirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyyHope.ElbbbirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elbbbird.app/Elbbbird";
+			};
+			name = Debug;
+		};
+		662FE0671C96BC850066D3A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ElbbbirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyyHope.ElbbbirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elbbbird.app/Elbbbird";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		662FE0401C96BC850066D3A1 /* Build configuration list for PBXProject "Elbbbird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662FE0601C96BC850066D3A1 /* Debug */,
+				662FE0611C96BC850066D3A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662FE0621C96BC850066D3A1 /* Build configuration list for PBXNativeTarget "Elbbbird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662FE0631C96BC850066D3A1 /* Debug */,
+				662FE0641C96BC850066D3A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662FE0651C96BC850066D3A1 /* Build configuration list for PBXNativeTarget "ElbbbirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662FE0661C96BC850066D3A1 /* Debug */,
+				662FE0671C96BC850066D3A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 662FE03D1C96BC850066D3A1 /* Project object */;
+}
