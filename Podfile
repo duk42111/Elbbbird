@@ -4,6 +4,8 @@ use_frameworks!
 
 target 'Elbbbird' do
 	pod 'RxSwift'
+	pod 'RxViewModel’
+	pod 'RxAlamofire'
 	pod 'Alamofire', '~> 3.0'
 	pod 'AlamofireImage', '~> 2.0'
 	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'

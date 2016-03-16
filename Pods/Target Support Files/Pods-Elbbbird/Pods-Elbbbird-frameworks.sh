@@ -86,12 +86,18 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Elbbbird/Alamofire.framework"
   install_framework "Pods-Elbbbird/AlamofireImage.framework"
+  install_framework "Pods-Elbbbird/RxAlamofire.framework"
+  install_framework "Pods-Elbbbird/RxCocoa.framework"
   install_framework "Pods-Elbbbird/RxSwift.framework"
+  install_framework "Pods-Elbbbird/RxViewModel.framework"
   install_framework "Pods-Elbbbird/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Elbbbird/Alamofire.framework"
   install_framework "Pods-Elbbbird/AlamofireImage.framework"
+  install_framework "Pods-Elbbbird/RxAlamofire.framework"
+  install_framework "Pods-Elbbbird/RxCocoa.framework"
   install_framework "Pods-Elbbbird/RxSwift.framework"
+  install_framework "Pods-Elbbbird/RxViewModel.framework"
   install_framework "Pods-Elbbbird/SwiftyJSON.framework"
 fi

@@ -13,6 +13,9 @@
 		662FE0501C96BC850066D3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662FE04F1C96BC850066D3A1 /* Assets.xcassets */; };
 		662FE0531C96BC850066D3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */; };
 		662FE05E1C96BC850066D3A1 /* ElbbbirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE05D1C96BC850066D3A1 /* ElbbbirdTests.swift */; };
+		662FE06A1C9965BB0066D3A1 /* DribbbleRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0691C9965BB0066D3A1 /* DribbbleRequester.swift */; };
+		662FE06D1C9968350066D3A1 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE06C1C9968350066D3A1 /* Shot.swift */; };
+		662FE0741C996A100066D3A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0731C996A100066D3A1 /* User.swift */; };
 		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		662FE0591C96BC850066D3A1 /* ElbbbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElbbbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		662FE05D1C96BC850066D3A1 /* ElbbbirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElbbbirdTests.swift; sourceTree = "<group>"; };
 		662FE05F1C96BC850066D3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662FE0691C9965BB0066D3A1 /* DribbbleRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DribbbleRequester.swift; path = Dribbble/DribbbleRequester.swift; sourceTree = "<group>"; };
+		662FE06C1C9968350066D3A1 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shot.swift; path = Model/Shot.swift; sourceTree = "<group>"; };
+		662FE0731C996A100066D3A1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +105,8 @@
 				662FE04F1C96BC850066D3A1 /* Assets.xcassets */,
 				662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */,
 				662FE0541C96BC850066D3A1 /* Info.plist */,
+				662FE06B1C9965C00066D3A1 /* Dribbble */,
+				662FE06E1C9968B50066D3A1 /* Model */,
 			);
 			path = Elbbbird;
 			sourceTree = "<group>";
@@ -110,6 +118,23 @@
 				662FE05F1C96BC850066D3A1 /* Info.plist */,
 			);
 			path = ElbbbirdTests;
+			sourceTree = "<group>";
+		};
+		662FE06B1C9965C00066D3A1 /* Dribbble */ = {
+			isa = PBXGroup;
+			children = (
+				662FE0691C9965BB0066D3A1 /* DribbbleRequester.swift */,
+			);
+			name = Dribbble;
+			sourceTree = "<group>";
+		};
+		662FE06E1C9968B50066D3A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				662FE06C1C9968350066D3A1 /* Shot.swift */,
+				662FE0731C996A100066D3A1 /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		70957C2512761AE8231A87AD /* Frameworks */ = {
@@ -274,6 +299,9 @@
 			files = (
 				662FE04B1C96BC850066D3A1 /* ViewController.swift in Sources */,
 				662FE0491C96BC850066D3A1 /* AppDelegate.swift in Sources */,
+				662FE06A1C9965BB0066D3A1 /* DribbbleRequester.swift in Sources */,
+				662FE06D1C9968350066D3A1 /* Shot.swift in Sources */,
+				662FE0741C996A100066D3A1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
