@@ -11,20 +11,7 @@ import UIKit
 import SwiftyJSON
 
 
-struct Extra {
-    let url: String?
-    let count: Int?
-    
-    init?(url: String?, count: Int?) {
-        guard let
-            url = url,
-            count = count
-        else { return nil }
-        
-        self.url = url
-        self.count = count
-    }
-}
+
 
 struct Images {
     let highDPIURL: String
@@ -39,26 +26,19 @@ struct Images {
 
 }
 
-//class Dates {
-//    let created: NSDate
-//    let updated: NSDate
-//    
-//    init(json: JSON) {
-//        self.created = NSDate(json[""].int64Value
-//    }
-//}
-
 class Shot {
     let id: Int
     let title: String?
     let description: String?
     let size: CGSize
     
-    let attachments: Extra?
-    let comments: Extra?
-    let rebounds: Extra?
-    let likes: Extra?
-    let buckets: Extra?
+    let user: User?
+    
+    let attachments: Count?
+    let comments: Count?
+    let rebounds: Count?
+    let likes: Count?
+    let buckets: Count?
     
     let images: Images
     
@@ -82,19 +62,32 @@ class Shot {
             return CGSize(width: CGFloat(width), height: CGFloat(height))
         }()
         
-        self.comments = Extra(url: json["comments_url"].stringValue,
-                            count: json["comments_count"].intValue)
+        self.comments = Count(
+            url: json["comments_url"].stringValue,
+            count: json["comments_count"].intValue)
         
-        self.attachments = Extra(url: json["attachments_url"].stringValue,
-                               count: json["attachments_count"].intValue)
+        self.attachments = Count(
+            url: json["attachments_url"].stringValue,
+            count: json["attachments_count"].intValue)
         
-        self.rebounds = Extra(url: json["rebounds_url"].stringValue,
-                            count: json["rebounds_count"].intValue)
+        self.rebounds = Count(
+            url: json["rebounds_url"].stringValue,
+            count: json["rebounds_count"].intValue)
         
-        self.likes = Extra(url: json["likes_url"].stringValue,
-                         count: json["likes_count"].intValue)
+        self.likes = Count(
+            url: json["likes_url"].stringValue,
+            count: json["likes_count"].intValue)
         
-        self.buckets = Extra(url: json["buckets_url"].stringValue,
-                           count: json["buckets_count"].intValue)
+        self.buckets = Count(
+            url: json["buckets_url"].stringValue,
+            count: json["buckets_count"].intValue)
+        
+        if let user = User(json: JSON(json["user"].dictionaryValue)) {
+            self.user = user
+        } else {
+            self.user = nil
+        }
+        
+        
     }
 }

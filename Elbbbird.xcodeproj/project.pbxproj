@@ -16,6 +16,8 @@
 		662FE06A1C9965BB0066D3A1 /* DribbbleRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0691C9965BB0066D3A1 /* DribbbleRequester.swift */; };
 		662FE06D1C9968350066D3A1 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE06C1C9968350066D3A1 /* Shot.swift */; };
 		662FE0741C996A100066D3A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0731C996A100066D3A1 /* User.swift */; };
+		662FE0781C9A912A0066D3A1 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0771C9A912A0066D3A1 /* Count.swift */; };
+		662FE07A1C9A91610066D3A1 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0791C9A91610066D3A1 /* Dates.swift */; };
 		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		662FE0691C9965BB0066D3A1 /* DribbbleRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DribbbleRequester.swift; path = Dribbble/DribbbleRequester.swift; sourceTree = "<group>"; };
 		662FE06C1C9968350066D3A1 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shot.swift; path = Model/Shot.swift; sourceTree = "<group>"; };
 		662FE0731C996A100066D3A1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		662FE0771C9A912A0066D3A1 /* Count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Count.swift; path = Model/Count.swift; sourceTree = "<group>"; };
+		662FE0791C9A91610066D3A1 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dates.swift; path = Model/Dates.swift; sourceTree = "<group>"; };
 		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				662FE06C1C9968350066D3A1 /* Shot.swift */,
+				662FE0791C9A91610066D3A1 /* Dates.swift */,
+				662FE0771C9A912A0066D3A1 /* Count.swift */,
 				662FE0731C996A100066D3A1 /* User.swift */,
 			);
 			name = Model;
@@ -301,7 +307,9 @@
 				662FE0491C96BC850066D3A1 /* AppDelegate.swift in Sources */,
 				662FE06A1C9965BB0066D3A1 /* DribbbleRequester.swift in Sources */,
 				662FE06D1C9968350066D3A1 /* Shot.swift in Sources */,
+				662FE07A1C9A91610066D3A1 /* Dates.swift in Sources */,
 				662FE0741C996A100066D3A1 /* User.swift in Sources */,
+				662FE0781C9A912A0066D3A1 /* Count.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

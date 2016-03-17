@@ -24,7 +24,7 @@ class DribbbleRequester {
     class func requestShots(completion: ShotsCompletionBlock) {
         
         let page: String = "1"
-        let limit: String = "20"
+        let limit: String = "1"
         
         let url = "https://api.dribbble.com/v1/shots?" +
             "access_token=" + Constant.accessToken +
@@ -47,6 +47,7 @@ class DribbbleRequester {
                 
                 for item in items {
                     print(item.title!)
+                    
                 }
                 
             case .Failure:
