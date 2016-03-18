@@ -57,9 +57,9 @@ class Shot {
         self.images = Images(json: json)
         
         self.size = {
-            let width: Float = json["width"].floatValue ?? 0
-            let height: Float = json["height"].floatValue ?? 0
-            return CGSize(width: CGFloat(width), height: CGFloat(height))
+            let width = json["width"].intValue
+            let height = json["height"].intValue
+            return CGSize(width: width, height: height)
         }()
         
         self.comments = Count(

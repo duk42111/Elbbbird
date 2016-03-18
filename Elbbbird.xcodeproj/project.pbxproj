@@ -18,6 +18,7 @@
 		662FE0741C996A100066D3A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0731C996A100066D3A1 /* User.swift */; };
 		662FE0781C9A912A0066D3A1 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0771C9A912A0066D3A1 /* Count.swift */; };
 		662FE07A1C9A91610066D3A1 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FE0791C9A91610066D3A1 /* Dates.swift */; };
+		668272981C9CCD06001861B7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272971C9CCD06001861B7 /* FeedViewModel.swift */; };
 		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		662FE0731C996A100066D3A1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		662FE0771C9A912A0066D3A1 /* Count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Count.swift; path = Model/Count.swift; sourceTree = "<group>"; };
 		662FE0791C9A91610066D3A1 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dates.swift; path = Model/Dates.swift; sourceTree = "<group>"; };
+		668272971C9CCD06001861B7 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewModel.swift; path = ViewModel/FeedViewModel.swift; sourceTree = "<group>"; };
 		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,14 +105,15 @@
 		662FE0471C96BC850066D3A1 /* Elbbbird */ = {
 			isa = PBXGroup;
 			children = (
-				662FE0481C96BC850066D3A1 /* AppDelegate.swift */,
-				662FE04A1C96BC850066D3A1 /* FeedViewController.swift */,
-				662FE04C1C96BC850066D3A1 /* Main.storyboard */,
-				662FE04F1C96BC850066D3A1 /* Assets.xcassets */,
-				662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */,
-				662FE0541C96BC850066D3A1 /* Info.plist */,
+				6682729B1C9CCD1B001861B7 /* Storyboard */,
 				662FE06B1C9965C00066D3A1 /* Dribbble */,
 				662FE06E1C9968B50066D3A1 /* Model */,
+				668272991C9CCD0C001861B7 /* Controller */,
+				6682729A1C9CCD11001861B7 /* ViewModel */,
+				6682729C1C9CCD3D001861B7 /* View */,
+				662FE0481C96BC850066D3A1 /* AppDelegate.swift */,
+				662FE04F1C96BC850066D3A1 /* Assets.xcassets */,
+				662FE0541C96BC850066D3A1 /* Info.plist */,
 			);
 			path = Elbbbird;
 			sourceTree = "<group>";
@@ -141,6 +144,38 @@
 				662FE0731C996A100066D3A1 /* User.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		668272991C9CCD0C001861B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				662FE04A1C96BC850066D3A1 /* FeedViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6682729A1C9CCD11001861B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				668272971C9CCD06001861B7 /* FeedViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		6682729B1C9CCD1B001861B7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				662FE0511C96BC850066D3A1 /* LaunchScreen.storyboard */,
+				662FE04C1C96BC850066D3A1 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		6682729C1C9CCD3D001861B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		70957C2512761AE8231A87AD /* Frameworks */ = {
@@ -309,6 +344,7 @@
 				662FE06D1C9968350066D3A1 /* Shot.swift in Sources */,
 				662FE07A1C9A91610066D3A1 /* Dates.swift in Sources */,
 				662FE0741C996A100066D3A1 /* User.swift in Sources */,
+				668272981C9CCD06001861B7 /* FeedViewModel.swift in Sources */,
 				662FE0781C9A912A0066D3A1 /* Count.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
