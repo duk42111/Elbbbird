@@ -82,11 +82,7 @@ class Shot {
             url: json["buckets_url"].stringValue,
             count: json["buckets_count"].intValue)
         
-        if let user = User(json: JSON(json["user"].dictionaryValue)) {
-            self.user = user
-        } else {
-            self.user = nil
-        }
+        self.user = User(json: JSON(json["user"].dictionaryValue)) ?? nil
         
         
     }
