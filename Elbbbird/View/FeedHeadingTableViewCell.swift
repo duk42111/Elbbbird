@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedHeadingTableViewCell: UITableViewCell {
+class FeedHeadingTableViewCell: UITableViewCell, NibLoadableView {
 
     @IBOutlet var avatarImageView: UIImageView! {
         didSet {

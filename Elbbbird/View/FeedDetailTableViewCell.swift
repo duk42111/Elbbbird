@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedDetailTableViewCell: UITableViewCell {
+class FeedDetailTableViewCell: UITableViewCell, NibLoadableView {
     
     @IBOutlet var titleLabel: UILabel! {
         didSet {

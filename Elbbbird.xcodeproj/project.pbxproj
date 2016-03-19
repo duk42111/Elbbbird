@@ -27,6 +27,11 @@
 		668272AC1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668272AA1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib */; };
 		668272AE1C9CDFBB001861B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272AD1C9CDFBB001861B7 /* UIView+Extension.swift */; };
 		668272B11C9CE46E001861B7 /* TableViewPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272B01C9CE46E001861B7 /* TableViewPresenting.swift */; };
+		668272B61C9CE6E0001861B7 /* UITableView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272B31C9CE6E0001861B7 /* UITableView+ReusableView.swift */; };
+		668272B71C9CE6E0001861B7 /* UITableViewCell+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272B41C9CE6E0001861B7 /* UITableViewCell+ReusableView.swift */; };
+		668272B81C9CE6E0001861B7 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272B51C9CE6E0001861B7 /* UITableViewHeaderFooterView+ReusableView.swift */; };
+		668272BC1C9CE6F6001861B7 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272BA1C9CE6F6001861B7 /* NibLoadableView.swift */; };
+		668272BD1C9CE6F6001861B7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272BB1C9CE6F6001861B7 /* ReusableView.swift */; };
 		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,11 @@
 		668272AA1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedHeadingTableViewCell.xib; path = View/FeedHeadingTableViewCell.xib; sourceTree = "<group>"; };
 		668272AD1C9CDFBB001861B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
 		668272B01C9CE46E001861B7 /* TableViewPresenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewPresenting.swift; path = Protocol/Extension/TableViewPresenting.swift; sourceTree = "<group>"; };
+		668272B31C9CE6E0001861B7 /* UITableView+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+ReusableView.swift"; path = "Protocol/Extension/UITableView+ReusableView.swift"; sourceTree = "<group>"; };
+		668272B41C9CE6E0001861B7 /* UITableViewCell+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+ReusableView.swift"; path = "Protocol/Extension/UITableViewCell+ReusableView.swift"; sourceTree = "<group>"; };
+		668272B51C9CE6E0001861B7 /* UITableViewHeaderFooterView+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewHeaderFooterView+ReusableView.swift"; path = "Protocol/Extension/UITableViewHeaderFooterView+ReusableView.swift"; sourceTree = "<group>"; };
+		668272BA1C9CE6F6001861B7 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadableView.swift; path = Protocol/NibLoadableView.swift; sourceTree = "<group>"; };
+		668272BB1C9CE6F6001861B7 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = Protocol/ReusableView.swift; sourceTree = "<group>"; };
 		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,9 +223,22 @@
 		668272B21C9CE4DF001861B7 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				668272B91C9CE6E5001861B7 /* Extension */,
 				668272B01C9CE46E001861B7 /* TableViewPresenting.swift */,
+				668272BA1C9CE6F6001861B7 /* NibLoadableView.swift */,
+				668272BB1C9CE6F6001861B7 /* ReusableView.swift */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		668272B91C9CE6E5001861B7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				668272B31C9CE6E0001861B7 /* UITableView+ReusableView.swift */,
+				668272B41C9CE6E0001861B7 /* UITableViewCell+ReusableView.swift */,
+				668272B51C9CE6E0001861B7 /* UITableViewHeaderFooterView+ReusableView.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		70957C2512761AE8231A87AD /* Frameworks */ = {
@@ -387,11 +410,16 @@
 				668272AB1C9CDCC7001861B7 /* FeedHeadingTableViewCell.swift in Sources */,
 				662FE06A1C9965BB0066D3A1 /* DribbbleRequester.swift in Sources */,
 				662FE06D1C9968350066D3A1 /* Shot.swift in Sources */,
+				668272B81C9CE6E0001861B7 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */,
+				668272BC1C9CE6F6001861B7 /* NibLoadableView.swift in Sources */,
 				662FE07A1C9A91610066D3A1 /* Dates.swift in Sources */,
+				668272BD1C9CE6F6001861B7 /* ReusableView.swift in Sources */,
 				668272AE1C9CDFBB001861B7 /* UIView+Extension.swift in Sources */,
 				662FE0741C996A100066D3A1 /* User.swift in Sources */,
+				668272B61C9CE6E0001861B7 /* UITableView+ReusableView.swift in Sources */,
 				668272A71C9CD3B5001861B7 /* FeedDetailTableViewCell.swift in Sources */,
 				668272A31C9CD29F001861B7 /* FeedImageTableViewCell.swift in Sources */,
+				668272B71C9CE6E0001861B7 /* UITableViewCell+ReusableView.swift in Sources */,
 				668272981C9CCD06001861B7 /* FeedViewModel.swift in Sources */,
 				662FE0781C9A912A0066D3A1 /* Count.swift in Sources */,
 			);

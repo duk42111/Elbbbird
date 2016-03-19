@@ -20,6 +20,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         requestShots()
+    
     }
 
     override func didReceiveMemoryWarning() {

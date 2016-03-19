@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedImageTableViewCell: UITableViewCell {
+class FeedImageTableViewCell: UITableViewCell, NibLoadableView {
 
     @IBOutlet var shotImageView: UIImageView!
     
