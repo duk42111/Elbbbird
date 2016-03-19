@@ -10,22 +10,29 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-private enum Section : Int {
-    case Image, Information
+private enum Row : Int {
+    case Heading, Image, Detail
+    static let count: Int = 3
 }
 
 class FeedViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    
-    var isRequestingNetwork = true
-    var viewModel = FeedViewModel()
+
+    var viewModel: FeedViewModel?
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         requestShots()
+        
+        tableView.register(FeedHeadingTableViewCell)
+        tableView.register(FeedImageTableViewCell)
+        tableView.register(FeedDetailTableViewCell)
+        
+        tableView.separatorStyle = .None
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,15 +45,44 @@ class FeedViewController: UIViewController {
 extension FeedViewController : UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Row.count
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let row = Row(rawValue: indexPath.row) else { fatalError() }
+        
+        switch row {
+        case .Heading:
+            return headingCell(forIndexPath: indexPath)
+        case .Image:
+            return imageCell(forIndexPath: indexPath)
+        case .Detail:
+            return detailCell(forIndexPath: indexPath)
+        }
+    }
+    
+    // Cells
+    
+    private func headingCell(forIndexPath indexPath: NSIndexPath) -> FeedHeadingTableViewCell {
+        let cell: FeedHeadingTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        
+        return cell
+    }
+    
+    private func imageCell(forIndexPath indexPath: NSIndexPath) -> FeedImageTableViewCell {
+        let cell: FeedImageTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        
+        return cell
+    }
+    
+    private func detailCell(forIndexPath indexPath: NSIndexPath) -> FeedDetailTableViewCell {
+        let cell: FeedDetailTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        
+        return cell
     }
 }
 
@@ -55,13 +91,16 @@ extension FeedViewController : UITableViewDataSource {
 extension FeedViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        guard let section = Section(rawValue: indexPath.row) else { return .min }
         
-        switch section {
+        guard let row = Row(rawValue: indexPath.row) else { return .min }
+        
+        switch row {
+        case .Heading:
+            return FeedHeadingTableViewCell.defaultHeight
         case .Image:
-            return 100
-        case .Information:
-            return 60
+            return FeedImageTableViewCell.defaultHeight
+        case .Detail:
+            return FeedDetailTableViewCell.defaultHeight
         }
     }
 }
@@ -71,8 +110,9 @@ extension FeedViewController : UITableViewDelegate {
 
 extension FeedViewController {
     private func requestShots() {
-        DribbbleRequester.requestShots { (shots) -> Void in
-            print("Hello world")
+        DribbbleRequester.requestShots { [weak self] (shots) -> Void in
+            let viewModel = FeedViewModel(shots: shots)
+            self?.viewModel = viewModel
         }
     }
 }

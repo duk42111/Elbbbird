@@ -7,7 +7,22 @@
 //
 
 import Foundation
+import RxSwift
 
 struct FeedViewModel {
+    let shots: Observable<[Shot]>
     
+    let title = "Popular Shots"
+    
+//    var isRequestingNetwork: Bool = true
+}
+
+// MARK: - Network Requests
+
+extension FeedViewModel {
+    private func requestShots() {
+        DribbbleRequester.requestShots { (shots) -> Void in
+            print("Hello world")
+        }
+    }
 }

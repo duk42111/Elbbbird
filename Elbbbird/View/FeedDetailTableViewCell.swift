@@ -41,5 +41,12 @@ class FeedDetailTableViewCell: UITableViewCell, NibLoadableView {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
+
+
+extension FeedDetailTableViewCell {
+    static var defaultHeight: CGFloat {
+        return 74
+    }
+}
+

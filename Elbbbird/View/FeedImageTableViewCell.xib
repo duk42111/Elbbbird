@@ -17,18 +17,25 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Spc-0l-ZhA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Spc-0l-ZhA" secondAttribute="height" multiplier="1:1" id="cf0-Uk-36P"/>
-                            <constraint firstAttribute="width" constant="320" id="crU-eB-nUw"/>
+                            <constraint firstAttribute="width" secondItem="Spc-0l-ZhA" secondAttribute="height" multiplier="1:1" id="RJB-hl-pQ1"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Spc-0l-ZhA" secondAttribute="bottom" id="LBx-55-f7i"/>
-                    <constraint firstAttribute="trailing" secondItem="Spc-0l-ZhA" secondAttribute="trailing" id="TWb-5Q-ICT"/>
-                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aDe-V6-8Yi"/>
-                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eog-zf-hGh"/>
+                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Al6-a7-T5u"/>
+                    <constraint firstAttribute="bottom" secondItem="Spc-0l-ZhA" secondAttribute="bottom" id="V4U-UU-JR1"/>
+                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="VjB-E0-Fbj"/>
+                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nwe-qM-Vzz"/>
+                    <constraint firstItem="Spc-0l-ZhA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="yIJ-pa-6iU"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Al6-a7-T5u"/>
+                        <exclude reference="yIJ-pa-6iU"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="shotImageView" destination="Spc-0l-ZhA" id="uI4-kc-d3J"/>
