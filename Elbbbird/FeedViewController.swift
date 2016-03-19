@@ -18,6 +18,8 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        requestShots()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +52,14 @@ extension FeedViewController : UITableViewDelegate {
             return 100
         case .Information:
             return 60
+        }
+    }
+}
+
+extension FeedViewController {
+    private func requestShots() {
+        DribbbleRequester.requestShots { (shots) -> Void in
+            print("Hello world")
         }
     }
 }

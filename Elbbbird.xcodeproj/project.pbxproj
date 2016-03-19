@@ -26,6 +26,7 @@
 		668272AB1C9CDCC7001861B7 /* FeedHeadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272A91C9CDCC7001861B7 /* FeedHeadingTableViewCell.swift */; };
 		668272AC1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668272AA1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib */; };
 		668272AE1C9CDFBB001861B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272AD1C9CDFBB001861B7 /* UIView+Extension.swift */; };
+		668272B11C9CE46E001861B7 /* TableViewPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668272B01C9CE46E001861B7 /* TableViewPresenting.swift */; };
 		AD763438051E2C1F31C620BA /* Pods_Elbbbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB044E1903083487795716ED /* Pods_Elbbbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		668272A91C9CDCC7001861B7 /* FeedHeadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedHeadingTableViewCell.swift; path = View/FeedHeadingTableViewCell.swift; sourceTree = "<group>"; };
 		668272AA1C9CDCC7001861B7 /* FeedHeadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedHeadingTableViewCell.xib; path = View/FeedHeadingTableViewCell.xib; sourceTree = "<group>"; };
 		668272AD1C9CDFBB001861B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
+		668272B01C9CE46E001861B7 /* TableViewPresenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewPresenting.swift; path = Protocol/Extension/TableViewPresenting.swift; sourceTree = "<group>"; };
 		CB044E1903083487795716ED /* Pods_Elbbbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elbbbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,12 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				6682729B1C9CCD1B001861B7 /* Storyboard */,
-				662FE06B1C9965C00066D3A1 /* Dribbble */,
 				662FE06E1C9968B50066D3A1 /* Model */,
 				668272991C9CCD0C001861B7 /* Controller */,
 				6682729A1C9CCD11001861B7 /* ViewModel */,
 				6682729C1C9CCD3D001861B7 /* View */,
 				668272AF1C9CE0FE001861B7 /* Extension */,
+				668272B21C9CE4DF001861B7 /* Protocol */,
+				662FE06B1C9965C00066D3A1 /* Dribbble */,
 				662FE0481C96BC850066D3A1 /* AppDelegate.swift */,
 				662FE04F1C96BC850066D3A1 /* Assets.xcassets */,
 				662FE0541C96BC850066D3A1 /* Info.plist */,
@@ -205,6 +208,14 @@
 				668272AD1C9CDFBB001861B7 /* UIView+Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		668272B21C9CE4DF001861B7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				668272B01C9CE46E001861B7 /* TableViewPresenting.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		70957C2512761AE8231A87AD /* Frameworks */ = {
@@ -370,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668272B11C9CE46E001861B7 /* TableViewPresenting.swift in Sources */,
 				662FE04B1C96BC850066D3A1 /* FeedViewController.swift in Sources */,
 				662FE0491C96BC850066D3A1 /* AppDelegate.swift in Sources */,
 				668272AB1C9CDCC7001861B7 /* FeedHeadingTableViewCell.swift in Sources */,
