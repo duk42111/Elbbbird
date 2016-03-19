@@ -65,8 +65,7 @@ class DribbbleRequester {
             Shot(json: $0)
         })
         
-        shots
-        .forEach({
+        shots.forEach({
             let title = $0.title ?? ""
             print(title)
         })
