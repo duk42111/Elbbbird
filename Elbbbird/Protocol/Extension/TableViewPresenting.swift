@@ -9,6 +9,18 @@
 import Foundation
 import UIKit
 
-protocol TableViewPresenting {
-    func registerViews()
+
+protocol ReusableRegistering {
+    
+    // Need to figure out how to put generics as extension variables isntead of funcs. Is it even possible?
+    func reusableViews<T>() -> [T]
+    
+    func registerReusableViews()
+}
+
+extension ReusableRegistering  {
+    
+    func registerReusableViews() {
+        
+    }
 }

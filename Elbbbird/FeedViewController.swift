@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 private enum Section : Int {
     case Image, Information
@@ -15,18 +17,23 @@ private enum Section : Int {
 class FeedViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    
+    var isRequestingNetwork = true
+    var viewModel = FeedViewModel()
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         requestShots()
-    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension FeedViewController : UITableViewDataSource {
     
@@ -43,6 +50,8 @@ extension FeedViewController : UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension FeedViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -56,6 +65,9 @@ extension FeedViewController : UITableViewDelegate {
         }
     }
 }
+
+
+// MARK: - Network Requests
 
 extension FeedViewController {
     private func requestShots() {
