@@ -1,5 +1,5 @@
 //
-//  FeedDetailTableViewCell.swift
+//  FeedHeadingTableViewCell.swift
 //  Elbbbird
 //
 //  Created by Andyy Hope on 19/03/2016.
@@ -8,32 +8,33 @@
 
 import UIKit
 
-class FeedDetailTableViewCell: UITableViewCell {
-    
-    @IBOutlet var titleLabel: UILabel! {
-        didSet {
-            titleLabel.text = nil
-        }
-    }
-    
-    @IBOutlet var descriptionLabel: UILabel! {
-        didSet {
-            descriptionLabel.text = nil
-        }
-    }
-    
-    @IBOutlet var commentsLabel: UILabel! {
-        didSet {
-            commentsLabel.text = "0"
-        }
-    }
-    
-    @IBOutlet var likesLabel: UILabel! {
-        didSet {
-            likesLabel.text = "0"
-        }
-    }
+class FeedHeadingTableViewCell: UITableViewCell {
 
+    @IBOutlet var avatarImageView: UIImageView! {
+        didSet {
+            avatarImageView.setCircular()
+        }
+    }
+    
+    @IBOutlet var usernameLabel: UILabel! {
+        didSet {
+            usernameLabel.text = nil
+        }
+    }
+    
+    @IBOutlet var locationLabel: UILabel! {
+        didSet {
+            locationLabel.text = nil
+        }
+    }
+    
+    @IBOutlet var dateLabel: UILabel! {
+        didSet {
+            dateLabel.text = nil
+        }
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

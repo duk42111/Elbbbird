@@ -30,6 +30,9 @@
                     <constraint firstItem="Spc-0l-ZhA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eog-zf-hGh"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="shotImageView" destination="Spc-0l-ZhA" id="uI4-kc-d3J"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
