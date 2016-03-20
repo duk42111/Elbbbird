@@ -17,6 +17,10 @@ private enum Row : Int {
     static let count: Int = 3
 }
 
+private enum Segue : String {
+    case Shot
+}
+
 class FeedViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
@@ -39,7 +43,6 @@ class FeedViewController: UIViewController {
         tableView.register(FeedDetailTableViewCell)
         
         tableView.separatorStyle = .None
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,7 +96,7 @@ extension FeedViewController : UITableViewDataSource {
         let cell: FeedImageTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
         guard let viewModel = viewModel?.viewModelForImageCell(atIndexPath: indexPath)
-            else { return cell }
+        else { return cell }
         
         cell.shotImageView.af_setImageWithURL(viewModel.imageURL)
         
@@ -104,15 +107,37 @@ extension FeedViewController : UITableViewDataSource {
         let cell: FeedDetailTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
         guard let viewModel = viewModel?.viewModelForDetailCell(atIndexPath: indexPath)
-            else { return cell }
+        else { return cell }
         
         cell.titleLabel.text = viewModel.title
         cell.descriptionLabel.text = viewModel.description
         cell.commentsLabel.text = viewModel.comments
         cell.likesLabel.text = viewModel.likes
         
-        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(Segue.Shot.rawValue, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let
+            indexPath = tableView.indexPathForSelectedRow,
+            identifier = segue.identifier,
+            segueIdentifier = Segue(rawValue: identifier)
+        else { return }
+        
+        switch segueIdentifier {
+        case .Shot:
+            guard let
+                viewModel = viewModel?.shots[indexPath.section],
+                viewController = segue.destinationViewController as? ShotViewController
+            else { return }
+            
+            let shotViewModel = ShotViewModel(shot: viewModel)
+            viewController.viewModel = shotViewModel
+        }
     }
 }
 

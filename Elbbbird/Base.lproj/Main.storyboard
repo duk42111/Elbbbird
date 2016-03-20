@@ -62,11 +62,89 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="QWR-TM-gT9" id="nAM-0A-sMu"/>
                         <outlet property="tableView" destination="7YS-rd-9JA" id="jSZ-c9-cvp"/>
+                        <segue destination="SsZ-wG-q7t" kind="show" identifier="Shot" id="jW1-gH-pYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1r-xv-02S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1187" y="1174"/>
+        </scene>
+        <!--Shot View Controller-->
+        <scene sceneID="68f-j1-ji7">
+            <objects>
+                <viewController id="SsZ-wG-q7t" customClass="ShotViewController" customModule="Elbbbird" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbV-Jg-GE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="YmC-FO-fVy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6qa-PH-Ymb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X2d-d4-vxY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="utw-wh-8Au">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nt1-he-fhz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5T-do-nAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1JD-Uq-pne">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-Ng-Axd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </tableView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="l4g-Ng-Axd" secondAttribute="trailing" id="7Ev-P2-cdd"/>
+                                                <constraint firstItem="l4g-Ng-Axd" firstAttribute="top" secondItem="1JD-Uq-pne" secondAttribute="top" id="Bwc-aA-o8i"/>
+                                                <constraint firstItem="l4g-Ng-Axd" firstAttribute="leading" secondItem="1JD-Uq-pne" secondAttribute="leading" id="Sos-O2-lrC"/>
+                                                <constraint firstAttribute="bottom" secondItem="l4g-Ng-Axd" secondAttribute="bottom" id="bJY-TZ-s8u"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="w5T-do-nAN" secondAttribute="trailing" id="MDK-qd-z9k"/>
+                                    <constraint firstItem="w5T-do-nAN" firstAttribute="top" secondItem="nt1-he-fhz" secondAttribute="top" id="Pnw-1I-zsm"/>
+                                    <constraint firstItem="w5T-do-nAN" firstAttribute="leading" secondItem="nt1-he-fhz" secondAttribute="leading" id="hXe-7O-2xL"/>
+                                    <constraint firstAttribute="bottom" secondItem="w5T-do-nAN" secondAttribute="bottom" id="nZZ-Wj-DSe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YmC-FO-fVy" firstAttribute="top" secondItem="X2d-d4-vxY" secondAttribute="bottom" id="28U-yt-KZ0"/>
+                            <constraint firstItem="X2d-d4-vxY" firstAttribute="leading" secondItem="6qa-PH-Ymb" secondAttribute="leading" id="EGz-36-iqd"/>
+                            <constraint firstItem="YmC-FO-fVy" firstAttribute="top" secondItem="nt1-he-fhz" secondAttribute="bottom" id="Ffh-A0-QMw"/>
+                            <constraint firstAttribute="trailing" secondItem="nt1-he-fhz" secondAttribute="trailing" id="FnO-xA-rph"/>
+                            <constraint firstItem="utw-wh-8Au" firstAttribute="centerY" secondItem="6qa-PH-Ymb" secondAttribute="centerY" id="MZv-fc-3hT"/>
+                            <constraint firstAttribute="trailing" secondItem="X2d-d4-vxY" secondAttribute="trailing" id="N12-QN-BZx"/>
+                            <constraint firstItem="nt1-he-fhz" firstAttribute="top" secondItem="6qa-PH-Ymb" secondAttribute="top" id="N1d-eH-VQS"/>
+                            <constraint firstItem="nt1-he-fhz" firstAttribute="leading" secondItem="6qa-PH-Ymb" secondAttribute="leading" id="S0S-TH-1NQ"/>
+                            <constraint firstItem="utw-wh-8Au" firstAttribute="centerX" secondItem="6qa-PH-Ymb" secondAttribute="centerX" id="lfp-xZ-ski"/>
+                            <constraint firstItem="X2d-d4-vxY" firstAttribute="top" secondItem="6qa-PH-Ymb" secondAttribute="top" id="lpX-tb-tFy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="utw-wh-8Au" id="UTd-87-DBK"/>
+                        <outlet property="shotImageView" destination="X2d-d4-vxY" id="9mU-mT-eKv"/>
+                        <outlet property="tableView" destination="l4g-Ng-Axd" id="B3g-az-KJy"/>
+                        <outlet property="visualEffectContainerView" destination="nt1-he-fhz" id="AjJ-lq-eZI"/>
+                        <outlet property="visualEffectView" destination="w5T-do-nAN" id="9uP-ge-pnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dw-ZQ-p11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="1174"/>
         </scene>
     </scenes>
 </document>
