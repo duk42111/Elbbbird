@@ -72,9 +72,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentLabel" destination="lqq-Rz-HPF" id="3BY-pe-0iL"/>
-                <outlet property="descriptionLabel" destination="lqq-Rz-HPF" id="Ogs-UV-P9c"/>
                 <outlet property="likesLabel" destination="xZ9-Ee-2jF" id="0vc-9K-aUS"/>
-                <outlet property="titleLabel" destination="u1k-iD-tVc" id="yc3-J6-e1y"/>
                 <outlet property="usernameLabel" destination="u1k-iD-tVc" id="P6K-lb-fRd"/>
             </connections>
             <point key="canvasLocation" x="355" y="284.5"/>

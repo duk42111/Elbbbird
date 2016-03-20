@@ -59,10 +59,14 @@ class DribbbleRequester {
     class func requestShot(forShotID shotID: Int, completion: ShotCompletionHandler) {
         
         let shotID: String = String(shotID)
+        let page: String = "1"
+        let limit: String = "1"
         
         let url: String =
             "https://api.dribbble.com/v1/shots?" +
             "access_token=" + Constant.accessToken +
+            "&page=" + page +
+            "&per_page=" + limit +
             "&id=" + shotID
         
         print(url)
@@ -87,9 +91,11 @@ class DribbbleRequester {
         let shotID: String = String(shotID)
         
         let url: String =
-            "https://api.dribbble.com/v1/comments?" +
-            "access_token=" + Constant.accessToken +
-            "&id=" + shotID
+            "https://api.dribbble.com/v1/" +
+            "shots/" + shotID +
+            "/comments?" +
+            "access_token=" + Constant.accessToken
+
         
         print(url)
         
@@ -113,7 +119,8 @@ class DribbbleRequester {
     // Parse Shots
     
     private class func parseShots(forResponse response: Response<AnyObject, NSError>, completion: ShotsCompletionHandler) {
-        guard let value = response.result.value else {
+        guard let value = response.result.value
+        else {
             completion(shots: [])
             return
         }
@@ -133,13 +140,13 @@ class DribbbleRequester {
     }
     
     private class func parseShot(forResponse response: Response<AnyObject, NSError>, completion: ShotCompletionHandler) {
-        
-        guard let value = response.result.value else {
+        guard let
+            value = response.result.value,
+            json = JSON(value).arrayValue.first
+        else {
             completion(shot: nil)
             return
         }
-        
-        let json = JSON(value)
         
         let shot: Shot = Shot(json: json)
         
@@ -147,7 +154,8 @@ class DribbbleRequester {
     }
     
     private class func parseComments(forResponse response: Response<AnyObject, NSError>, completion: CommentsCompletionHandler) {
-        guard let value = response.result.value else {
+        guard let value = response.result.value
+        else {
             completion(comments: [])
             return
         }

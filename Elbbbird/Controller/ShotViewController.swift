@@ -59,9 +59,16 @@ extension ShotViewController : UITableViewDataSource {
         
         cell.usernameLabel.text = viewModel.username
         cell.commentLabel.text = viewModel.body
-        cell.likesLabel.text = viewModel.likes
+//        cell.likesLabel.text = viewModel.likes
         
         return cell
+    }
+}
+
+
+extension ShotViewController : UITableViewDelegate {
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return ShotCommentTableViewCell.defaultHeight
     }
 }
 
