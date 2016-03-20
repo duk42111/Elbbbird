@@ -54,7 +54,7 @@ class Shot {
         self.tags = Set(json["tags"].arrayValue
             .map({ $0.stringValue }))
         
-        self.images = Images(json: json)
+        self.images = Images(json: json["images"])
         
         self.size = {
             let width = json["width"].intValue

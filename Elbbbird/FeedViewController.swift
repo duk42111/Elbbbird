@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AlamofireImage
 
 
 private enum Row : Int {
@@ -19,7 +20,6 @@ private enum Row : Int {
 class FeedViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-
     @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
     
     var viewModel: FeedViewModel? {
@@ -60,6 +60,7 @@ extension FeedViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         guard let row = Row(rawValue: indexPath.row) else { fatalError() }
         
         switch row {
@@ -83,7 +84,7 @@ extension FeedViewController : UITableViewDataSource {
         cell.usernameLabel.text = viewModel.username
         cell.dateLabel.text = viewModel.date
         cell.locationLabel.text = viewModel.location
-        cell.avatarImageView.image = viewModel.image
+        cell.avatarImageView.af_setImageWithURL(viewModel.imageURL)
         
         return cell
     }
@@ -91,9 +92,10 @@ extension FeedViewController : UITableViewDataSource {
     private func imageCell(forIndexPath indexPath: NSIndexPath) -> FeedImageTableViewCell {
         let cell: FeedImageTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
-        guard let shot = viewModel?.shots[indexPath.section] else { return cell }
+        guard let viewModel = viewModel?.viewModelForImageCell(atIndexPath: indexPath)
+            else { return cell }
         
-        
+        cell.shotImageView.af_setImageWithURL(viewModel.imageURL)
         
         return cell
     }
@@ -101,7 +103,13 @@ extension FeedViewController : UITableViewDataSource {
     private func detailCell(forIndexPath indexPath: NSIndexPath) -> FeedDetailTableViewCell {
         let cell: FeedDetailTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
-        guard let shot = viewModel?.shots[indexPath.section] else { return cell }
+        guard let viewModel = viewModel?.viewModelForDetailCell(atIndexPath: indexPath)
+            else { return cell }
+        
+        cell.titleLabel.text = viewModel.title
+        cell.descriptionLabel.text = viewModel.description
+        cell.commentsLabel.text = viewModel.comments
+        cell.likesLabel.text = viewModel.likes
         
         
         return cell

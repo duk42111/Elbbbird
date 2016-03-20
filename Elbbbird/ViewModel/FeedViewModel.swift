@@ -21,21 +21,55 @@ class FeedViewModel : RxViewModel {
         let viewModel = FeedViewHeadingCellViewModel(shot: shots[indexPath.section])
         return viewModel
     }
+    
+    func viewModelForImageCell(atIndexPath indexPath: NSIndexPath) -> FeedViewImageCellViewModel {
+        let viewModel = FeedViewImageCellViewModel(shot: shots[indexPath.section])
+        return viewModel
+    }
+    
+    func viewModelForDetailCell(atIndexPath indexPath: NSIndexPath) -> FeedViewDetailCellViewModel {
+        let viewModel = FeedViewDetailCellViewModel(shot: shots[indexPath.section])
+        return viewModel
+    }
 }
 
 struct FeedViewHeadingCellViewModel {
     let shot: Shot
-    let username: String!
-    let location: String!
-    let date: String!
-    let image: UIImage!
+    let username: String
+    let location: String
+    let date: String
+    let imageURL: NSURL
     
-    init(shot: Shot, username: String = "", location: String = "", date: String = "", image: UIImage = UIImage()) {
+    init(shot: Shot, username: String = "", location: String = "", date: String = "", imageURL: NSURL = NSURL()) {
         
         self.shot = shot
         self.username = shot.user?.username ?? username
         self.location = shot.user?.location ?? location
         self.date = date
-        self.image = image
+        self.imageURL = NSURL(string: shot.user?.avatarURL ?? "") ?? NSURL()
+    }
+}
+
+struct FeedViewImageCellViewModel {
+    let imageURL: NSURL
+    
+    init(shot: Shot, imageURL: NSURL = NSURL()) {
+        self.imageURL = NSURL(string: shot.images.normalURL) ?? NSURL()
+    }
+}
+
+struct FeedViewDetailCellViewModel {
+    let title: String
+    let description: String
+    let comments: String
+    let likes: String
+    
+    init(shot: Shot, title: String = "", description: String = "", comments: String = "0", likes: String = "0") {
+        
+        self.title = shot.title ?? title
+        self.description = shot.description ?? description
+        self.comments = String(shot.comments?.count ?? 0)
+        self.likes = String(shot.likes?.count ?? 0)
+        
     }
 }
