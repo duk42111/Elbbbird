@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
 private enum Row : Int {
     case Heading, Image, Detail
     static let count: Int = 3
@@ -76,17 +77,32 @@ extension FeedViewController : UITableViewDataSource {
     private func headingCell(forIndexPath indexPath: NSIndexPath) -> FeedHeadingTableViewCell {
         let cell: FeedHeadingTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
+        guard let viewModel = viewModel?.viewModelForHeadingCell(atIndexPath: indexPath)
+        else { return cell }
+        
+        cell.usernameLabel.text = viewModel.username
+        cell.dateLabel.text = viewModel.date
+        cell.locationLabel.text = viewModel.location
+        cell.avatarImageView.image = viewModel.image
+        
         return cell
     }
     
     private func imageCell(forIndexPath indexPath: NSIndexPath) -> FeedImageTableViewCell {
         let cell: FeedImageTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
+        guard let shot = viewModel?.shots[indexPath.section] else { return cell }
+        
+        
+        
         return cell
     }
     
     private func detailCell(forIndexPath indexPath: NSIndexPath) -> FeedDetailTableViewCell {
         let cell: FeedDetailTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        
+        guard let shot = viewModel?.shots[indexPath.section] else { return cell }
+        
         
         return cell
     }

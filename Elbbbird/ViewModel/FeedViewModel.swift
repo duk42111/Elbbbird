@@ -16,14 +16,26 @@ class FeedViewModel : RxViewModel {
     init(shots: [Shot]) {
         self.shots = shots
     }
+    
+    func viewModelForHeadingCell(atIndexPath indexPath: NSIndexPath) -> FeedViewHeadingCellViewModel {
+        let viewModel = FeedViewHeadingCellViewModel(shot: shots[indexPath.section])
+        return viewModel
+    }
 }
 
-// MARK: - Network Requests
-
-extension FeedViewModel {
-    private func requestShots() {
-        DribbbleRequester.requestShots { (shots) -> Void in
-            print("Hello world")
-        }
+struct FeedViewHeadingCellViewModel {
+    let shot: Shot
+    let username: String!
+    let location: String!
+    let date: String!
+    let image: UIImage!
+    
+    init(shot: Shot, username: String = "", location: String = "", date: String = "", image: UIImage = UIImage()) {
+        
+        self.shot = shot
+        self.username = shot.user?.username ?? username
+        self.location = shot.user?.location ?? location
+        self.date = date
+        self.image = image
     }
 }

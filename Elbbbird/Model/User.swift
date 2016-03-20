@@ -24,7 +24,7 @@ struct Links {
 struct User {
 
     let id: Int
-    let username: Int
+    let username: String
     
     let name: String?
     let bio: String?
@@ -42,7 +42,7 @@ struct User {
     
     init?(json: JSON) {
         self.id = json["id"].intValue
-        self.username = json["username"].intValue
+        self.username = json["username"].stringValue
         
         self.name = json["name"].stringValue
         self.bio = json["bio"].stringValue
