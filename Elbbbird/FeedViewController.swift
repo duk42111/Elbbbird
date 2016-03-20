@@ -19,8 +19,14 @@ class FeedViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
 
-    var viewModel: FeedViewModel?
-    let disposeBag = DisposeBag()
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    
+    var viewModel: FeedViewModel? {
+        didSet {
+            tableView.reloadData()
+            activityIndicatorView.stopAnimating()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +51,7 @@ class FeedViewController: UIViewController {
 extension FeedViewController : UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return viewModel?.shots.count ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

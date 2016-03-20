@@ -8,13 +8,14 @@
 
 import Foundation
 import RxSwift
+import RxViewModel
 
-struct FeedViewModel {
-    let shots: Observable<[Shot]>
+class FeedViewModel : RxViewModel {
+    let shots: [Shot]
     
-    let title = "Popular Shots"
-    
-//    var isRequestingNetwork: Bool = true
+    init(shots: [Shot]) {
+        self.shots = shots
+    }
 }
 
 // MARK: - Network Requests

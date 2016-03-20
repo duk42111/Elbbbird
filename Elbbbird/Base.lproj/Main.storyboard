@@ -60,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jr0-R6-O6k"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="QWR-TM-gT9" id="nAM-0A-sMu"/>
                         <outlet property="tableView" destination="7YS-rd-9JA" id="jSZ-c9-cvp"/>
                     </connections>
                 </viewController>
